@@ -162,6 +162,15 @@ button{
 
 }
 
+
+@media(max-width:316px) {
+    .result,
+    .bestScore,
+       button{
+           font-size: 18px;
+       }
+    
+}
 @media(max-width:324px){
     button{
         padding: 3px;
