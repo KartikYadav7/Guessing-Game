@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <h1>Guessing Game</h1>
+        </a>
+
+    </header>
+    <main class="main">
+
+        <p class="para">Lets Do Some Brainstorming!.We have selected a random number between 1 and 100. See if you can
+            guess it . We'll tell you if your guess was too high or too low.The player with less score wins the Game.
+        </p>
+        <div class="content">
+            <label for="userInput">Guess The Number:</label>
+            <input required id="userInput" type="number" placeholder="0-100" onfocus=this.value='' class="userInput">
+            <input type="submit" value="Submit" class="submit">
+
+        </div>
+        <div class="resultParas">
+            <p class="text"></p>
+        </div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="btn"></div>
+    </div>
+    </main>
+    <footer class="footer">
+        <p>Copyright &copy; 2024 by Kartik Yadav</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
