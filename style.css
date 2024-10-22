@@ -2,19 +2,18 @@
     margin: 0;
     padding: 0;
    font-family: 'Times New Roman', Times, serif;
+   color: #fff;
+   text-decoration: none;
+   background-color:var(--primary-color);
 }
-
-a{
-    text-decoration: none;
-    color: black;
+:root{
+    --primary-color:#414141;
+    --secondary-color:#212121;
 }
-
-
 .para{
     text-align: center;
     font-size: 1.5rem;
     padding: 1.5rem;
-
 }
 
 .text{
@@ -31,8 +30,9 @@ h1{
     text-align: center;
     font-size: 4rem;
     height: 70px;
-    background-color:lightcyan;
+    background-color:var(--secondary-color);
     padding: 1rem;
+    border-bottom: 2px solid black;   
 }
 
 .content{
@@ -52,14 +52,14 @@ input[type="submit"] {
     width: fit-content;
     padding: 5px 20px;
     /* width: 8rem; */
-    background-color:white;
+    background-color:var(--secondary-color);
     border:2px solid black;
 }
 
 input[type="submit"]:hover,
 button:hover {
-    background-color: lightslategray;
-    border: 2px solid lightslategray;
+    background-color: black;
+    border: 2px solid black;
     color: white;
     font-weight: 400;
     cursor: pointer;
@@ -69,7 +69,7 @@ button{
     font-size: 1.5rem;
     padding: 5px;
     display: flex;
-    background-color:white;
+    background-color:var(--secondary-color);
     border:2px solid black;
 }
 
@@ -79,8 +79,7 @@ button{
     font-size: 1.5rem;
     border: 2px solid black;
     padding: 5px;
-    background-color: black;
-    color: white;
+    background-color:var(--secondary-color);
 }
 
  .box, 
@@ -94,12 +93,15 @@ button{
     width: 100%;
     bottom: 0;
     height: 60px;
-    color: white;
-    background-color: black ;
+    /* color: white; */
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+}
+.footer p{
+    background-color:var(--secondary-color);
 }
 
 .container{
@@ -159,9 +161,18 @@ button{
     height: 40px;
     font-size: 18px;
 }
+.para{
+    font-size: 18px;
+}
 
 }
 
+@media(max-width:324px){
+    button{
+        padding: 3px;
+        margin-top: 0;
+    }
+}
 
 @media(max-width:316px) {
     .result,
@@ -170,10 +181,4 @@ button{
            font-size: 18px;
        }
     
-}
-@media(max-width:324px){
-    button{
-        padding: 3px;
-        margin-top: 0;
-    }
 }
