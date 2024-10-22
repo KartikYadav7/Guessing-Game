@@ -3,6 +3,7 @@ let score;
 let resetButton;
 let resetScore;
 
+
 let highScore = localStorage.getItem('highScore') || 0;
 
 let computer = Math.floor(Math.random() * 100 + 1);
@@ -15,6 +16,7 @@ const userInput = document.querySelector('.userInput');
 const text = document.querySelector('.text');
 const footer=document.querySelector('.footer');
 
+const color="#212121";
 
 document.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
@@ -31,7 +33,7 @@ submit.addEventListener('click', function(e) {
 function compute() {
     const userGuess = parseInt(userInput.value);
     if (isNaN(userGuess) || userGuess < 0 || userGuess > 100) {
-        text.style.backgroundColor = "red";
+        text.style.backgroundColor = `${color}`;
         text.textContent = `Invalid input. Please enter a number between 0 and 100.`;
         userInput.value = ''; 
     } else {
@@ -41,7 +43,7 @@ function compute() {
 
 function checkGuess(userGuess) {
     if (userGuess === computer) {
-        text.style.backgroundColor = "lightgreen";
+        text.style.backgroundColor = `${color}`;
         text.textContent = `Congrats!! You WON. ${userGuess} is the correct number.`;
         count+=100;
         Score();
@@ -50,12 +52,12 @@ function checkGuess(userGuess) {
     } 
 
     else if (userGuess < computer) {
-        text.style.backgroundColor = "lightcoral";
+        text.style.backgroundColor =`${color}`;
         text.textContent = `Wrong! ${userGuess} is too low.`;
         count-=5;
     }
      else if (userGuess > computer) {
-        text.style.backgroundColor = "lightcoral";
+        text.style.backgroundColor = `${color}`;
         text.textContent = `Wrong! ${userGuess} is too high.`;
         count-=5;
     }
@@ -94,7 +96,7 @@ function resetGame() {
     userInput.value = '';
     userInput.focus();
     text.textContent = ''; 
-    text.style.backgroundColor = 'white';
+    text.style.backgroundColor = '#414141';
     computer = Math.floor(Math.random() * 100 + 1);
     count = 0;
 }
